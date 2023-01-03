@@ -134,13 +134,19 @@ const HeroSection = () => {
                 fugiat.
               </p>
               <div className="relative mx-auto mt-10 max-w-sm sm:flex sm:max-w-none  sm:justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="flex items-center justify-center rounded-md border border-transparent bg-[#1EE09A] px-4 py-3 sm:justify-center text-base font-medium text-white shadow-sm hover:bg-[#1EE09A] sm:px-8"
+                <a
+                  href="https://m.me/helloworldeg/"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Get started
-                </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="flex items-center justify-center rounded-md border border-transparent bg-[#1EE09A] px-4 py-3 sm:justify-center text-base font-medium text-white shadow-sm hover:bg-[#1EE09A] sm:px-8"
+                  >
+                    Get started
+                  </motion.button>
+                </a>
               </div>
             </div>
           </div>
