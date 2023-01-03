@@ -3,6 +3,7 @@ import Services from "../components/services";
 import Testimonials from "../components/testimonials";
 import HeroSection from "../components/heroSection";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
+import ReactPlayer from "react-player";
 
 const blogPosts = [
   {
@@ -155,12 +156,11 @@ const footerNavigation = {
 
 export default function Example() {
   return (
-    <div className="">
-      <div className="relative overflow-hidden">
-        <main>
-          <HeroSection />
-          {/* Feature section with screenshot */}
-          {/* <div className="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
+    <div className="relative overflow-hidden">
+      <main>
+        <HeroSection />
+        {/* Feature section with screenshot */}
+        {/* <div className="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
               <div>
                 <h2 className="text-lg font-semibold text-cyan-600">
@@ -184,250 +184,248 @@ export default function Example() {
               </div>
             </div>
           </div> */}
-          <Services />
-
-          {/* Testimonial section */}
-
-          <div className="px-12">
-            <Testimonials />
-          </div>
-
-          {/* Blog section */}
-          <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
-            <div className="relative">
-              <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-                <h2 className="text-lg font-semibold text-cyan-600">Learn</h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Helpful Resources
-                </p>
-                <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
-                  Phasellus lorem quam molestie id quisque diam aenean nulla in.
-                  Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-                  condimentum id viverra nulla.
-                </p>
-              </div>
-              <div className="mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
-                {blogPosts.map((post) => (
-                  <div
-                    key={post.id}
-                    className="flex flex-col overflow-hidden rounded-lg shadow-lg"
-                  >
-                    <div className="flex-shrink-0">
-                      <img
-                        className="h-48 w-full object-cover"
-                        src={post.imageUrl}
-                        alt=""
-                      />
-                    </div>
-                    <div className="flex flex-1 flex-col justify-between bg-white p-6">
-                      <div className="flex-1">
-                        <p className="text-sm font-medium text-cyan-600">
-                          <a
-                            href={post.category.href}
-                            className="hover:underline"
-                          >
-                            {post.category.name}
-                          </a>
+        <Services />
+        {/* Testimonial section */}
+        {/* <Testimonials /> */}
+        {/* <ReactPlayer url="/testmo.mp4" /> */}
+        <video autoPlay loop muted width="90%" className="mx-auto">
+          <source src="/testmo.webm" type="video/webm" />
+          <source src="/testmo.mp4" type="video/mp4" />
+          Sorry, your browser doesn't support videos.
+        </video>
+        {/* Blog section */}
+        <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
+          <div className="relative">
+            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+              <h2 className="text-lg font-semibold text-cyan-600">Learn</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Helpful Resources
+              </p>
+              <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+                Phasellus lorem quam molestie id quisque diam aenean nulla in.
+                Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
+                condimentum id viverra nulla.
+              </p>
+            </div>
+            <div className="mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
+              {blogPosts.map((post) => (
+                <div
+                  key={post.id}
+                  className="flex flex-col overflow-hidden rounded-lg shadow-lg"
+                >
+                  <div className="flex-shrink-0">
+                    <img
+                      className="h-48 w-full object-cover"
+                      src={post.imageUrl}
+                      alt=""
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col justify-between bg-white p-6">
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-cyan-600">
+                        <a
+                          href={post.category.href}
+                          className="hover:underline"
+                        >
+                          {post.category.name}
+                        </a>
+                      </p>
+                      <a href={post.href} className="mt-2 block">
+                        <p className="text-xl font-semibold text-gray-900">
+                          {post.title}
                         </p>
-                        <a href={post.href} className="mt-2 block">
-                          <p className="text-xl font-semibold text-gray-900">
-                            {post.title}
-                          </p>
-                          <p className="mt-3 text-base text-gray-500">
-                            {post.preview}
-                          </p>
+                        <p className="mt-3 text-base text-gray-500">
+                          {post.preview}
+                        </p>
+                      </a>
+                    </div>
+                    <div className="mt-6 flex items-center">
+                      <div className="flex-shrink-0">
+                        <a href={post.author.href}>
+                          <img
+                            className="h-10 w-10 rounded-full"
+                            src={post.author.imageUrl}
+                            alt={post.author.name}
+                          />
                         </a>
                       </div>
-                      <div className="mt-6 flex items-center">
-                        <div className="flex-shrink-0">
-                          <a href={post.author.href}>
-                            <img
-                              className="h-10 w-10 rounded-full"
-                              src={post.author.imageUrl}
-                              alt={post.author.name}
-                            />
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900">
+                          <a
+                            href={post.author.href}
+                            className="hover:underline"
+                          >
+                            {post.author.name}
                           </a>
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm font-medium text-gray-900">
-                            <a
-                              href={post.author.href}
-                              className="hover:underline"
-                            >
-                              {post.author.name}
-                            </a>
-                          </p>
-                          <div className="flex space-x-1 text-sm text-gray-500">
-                            <time dateTime={post.datetime}>{post.date}</time>
-                            <span aria-hidden="true">&middot;</span>
-                            <span>{post.readingLength} read</span>
-                          </div>
+                        </p>
+                        <div className="flex space-x-1 text-sm text-gray-500">
+                          <time dateTime={post.datetime}>{post.date}</time>
+                          <span aria-hidden="true">&middot;</span>
+                          <span>{post.readingLength} read</span>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="relative bg-gray-900">
+          <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+            <img
+              className="h-full w-full object-cover"
+              src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100"
+              alt=""
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply"
+            />
+          </div>
+          <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
+            <div className="md:ml-auto md:w-1/2 md:pl-10">
+              <h2 className="text-lg font-semibold text-gray-300">
+                Award winning support
+              </h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                We’re here to help
+              </p>
+              <p className="mt-3 text-lg text-gray-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+                egestas tempus tellus etiam sed. Quam a scelerisque amet
+                ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
+                quisque ut interdum tincidunt duis.
+              </p>
+              <div className="mt-8">
+                <div className="inline-flex rounded-md shadow">
+                  <a
+                    href="#"
+                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
+                  >
+                    Visit the help center
+                    <ArrowTopRightOnSquareIcon
+                      className="-mr-1 ml-3 h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer className="bg-gray-50" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" className="sr-only">
+          Footer
+        </h2>
+        <div className="mx-auto max-w-md px-4 pt-12 sm:max-w-7xl sm:px-6 lg:px-8 lg:pt-16">
+          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div className="space-y-8 xl:col-span-1">
+              <img
+                className="h-10"
+                src="https://tailwindui.com/img/logos/mark.svg?color=gray&shade=300"
+                alt="Company name"
+              />
+              <p className="text-base text-gray-500">
+                Making the world a better place through constructing elegant
+                hierarchies.
+              </p>
+              <div className="flex space-x-6">
+                {footerNavigation.social.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-400 hover:text-gray-500"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="relative bg-gray-900">
-            <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-              <img
-                className="h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100"
-                alt=""
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply"
-              />
-            </div>
-            <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
-              <div className="md:ml-auto md:w-1/2 md:pl-10">
-                <h2 className="text-lg font-semibold text-gray-300">
-                  Award winning support
-                </h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  We’re here to help
-                </p>
-                <p className="mt-3 text-lg text-gray-300">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                  egestas tempus tellus etiam sed. Quam a scelerisque amet
-                  ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-                  quisque ut interdum tincidunt duis.
-                </p>
-                <div className="mt-8">
-                  <div className="inline-flex rounded-md shadow">
-                    <a
-                      href="#"
-                      className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
-                    >
-                      Visit the help center
-                      <ArrowTopRightOnSquareIcon
-                        className="-mr-1 ml-3 h-5 w-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                    </a>
-                  </div>
+            <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+              <div className="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 className="text-base font-medium text-gray-900">
+                    Solutions
+                  </h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {footerNavigation.solutions.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-500 hover:text-gray-900"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-12 md:mt-0">
+                  <h3 className="text-base font-medium text-gray-900">
+                    Support
+                  </h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {footerNavigation.support.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-500 hover:text-gray-900"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 className="text-base font-medium text-gray-900">
+                    Company
+                  </h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {footerNavigation.company.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-500 hover:text-gray-900"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-12 md:mt-0">
+                  <h3 className="text-base font-medium text-gray-900">Legal</h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {footerNavigation.legal.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-500 hover:text-gray-900"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </main>
-        <footer className="bg-gray-50" aria-labelledby="footer-heading">
-          <h2 id="footer-heading" className="sr-only">
-            Footer
-          </h2>
-          <div className="mx-auto max-w-md px-4 pt-12 sm:max-w-7xl sm:px-6 lg:px-8 lg:pt-16">
-            <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-              <div className="space-y-8 xl:col-span-1">
-                <img
-                  className="h-10"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=gray&shade=300"
-                  alt="Company name"
-                />
-                <p className="text-base text-gray-500">
-                  Making the world a better place through constructing elegant
-                  hierarchies.
-                </p>
-                <div className="flex space-x-6">
-                  {footerNavigation.social.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-gray-400 hover:text-gray-500"
-                    >
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-                <div className="md:grid md:grid-cols-2 md:gap-8">
-                  <div>
-                    <h3 className="text-base font-medium text-gray-900">
-                      Solutions
-                    </h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.solutions.map((item) => (
-                        <li key={item.name}>
-                          <a
-                            href={item.href}
-                            className="text-base text-gray-500 hover:text-gray-900"
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mt-12 md:mt-0">
-                    <h3 className="text-base font-medium text-gray-900">
-                      Support
-                    </h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.support.map((item) => (
-                        <li key={item.name}>
-                          <a
-                            href={item.href}
-                            className="text-base text-gray-500 hover:text-gray-900"
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="md:grid md:grid-cols-2 md:gap-8">
-                  <div>
-                    <h3 className="text-base font-medium text-gray-900">
-                      Company
-                    </h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.company.map((item) => (
-                        <li key={item.name}>
-                          <a
-                            href={item.href}
-                            className="text-base text-gray-500 hover:text-gray-900"
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mt-12 md:mt-0">
-                    <h3 className="text-base font-medium text-gray-900">
-                      Legal
-                    </h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.legal.map((item) => (
-                        <li key={item.name}>
-                          <a
-                            href={item.href}
-                            className="text-base text-gray-500 hover:text-gray-900"
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 border-t border-gray-200 py-8">
-              <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2020 Your Company, Inc. All rights reserved.
-              </p>
-            </div>
+          <div className="mt-12 border-t border-gray-200 py-8">
+            <p className="text-base text-gray-400 xl:text-center">
+              &copy; 2020 Your Company, Inc. All rights reserved.
+            </p>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   );
 }

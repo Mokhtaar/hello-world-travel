@@ -15,7 +15,7 @@ const HeroSection = () => {
     <div
       className="sm:pt-16 lg:overflow-hidden lg:pt-5 lg:pb-14"
       style={{
-        backgroundImage: `url("bgI.png")`,
+        backgroundImage: `url("test.png")`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -122,7 +122,7 @@ const HeroSection = () => {
           {/* <div className="lg:grid lg:grid-cols-2 lg:gap-8"> */}
           <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-center">
             <div className="lg:py-24">
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white  lg:mt-6 xl:text-6xl">
                 <span className="block">A better way to</span>
                 <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text pb-3 text-transparent sm:pb-5">
                   ship web apps
@@ -133,11 +133,11 @@ const HeroSection = () => {
                 Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
                 fugiat.
               </p>
-              <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
+              <div className="relative mx-auto mt-10 max-w-sm sm:flex sm:max-w-none  sm:justify-center">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="flex items-center justify-center rounded-md border border-transparent bg-[#1EE09A] px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-[#1EE09A] sm:px-8"
+                  className="flex items-center justify-center rounded-md border border-transparent bg-[#1EE09A] px-4 py-3 sm:justify-center text-base font-medium text-white shadow-sm hover:bg-[#1EE09A] sm:px-8"
                 >
                   Get started
                 </motion.button>
