@@ -4,17 +4,35 @@ import Testimonials from "../components/testimonials";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import Footer from "../components/footer";
 import Blogs from "../components/blogs";
+import { Canvas, extend } from "@react-three/fiber";
+import Sphere from "../components/sphere";
+import { OrbitControls } from "@react-three/drei";
+import Stars from "../components/stars";
+import Model from "../components/Plane";
+import Advantages from "../components/Advantages";
 
 export default function Example() {
   return (
     <div className="relative overflow-hidden">
-      <main>
+      <Canvas
+        camera={{ position: [0, 0, 1], fov: 50 }}
+        style={{
+          // position: "fixed",
+          width: "100%",
+          backgroundColor: "#081529",
+          height: "95vh",
+        }}
+      >
         <HeroSection />
+        <Stars />
+      </Canvas>
+      <main>
         <Services />
+        {/* <Advantages /> */}
         <Testimonials />
         <Blogs />
         {/* CTA Section */}
-        <div className="overflow-hidden bg-gray-100 py-16">
+        {/* <div className="overflow-hidden bg-gray-100 py-16">
           <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-prose text-base lg:max-w-none">
               <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
@@ -160,7 +178,7 @@ export default function Example() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>
