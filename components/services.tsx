@@ -20,7 +20,7 @@ const features = [
     icon: BiHotel,
   },
   {
-    name: "Changes/Cancellations",
+    name: "Changes & cancellations",
     description:
       "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: ArrowPathIcon,
@@ -37,6 +37,12 @@ const features = [
       "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: GiReceiveMoney,
   },
+  // {
+  //   name: "Meet & Assist",
+  //   description:
+  //     "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+  //   icon: GiReceiveMoney,
+  // },
 ];
 
 export default function Services() {
@@ -73,12 +79,10 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
           >
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="wrapper grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
               {features.map((feature) => (
-                <motion.div
-                  variants={serSecionVariant}
-                >
-                  <div key={feature.name} className="pt-6">
+                <motion.div variants={serSecionVariant} className="card">
+                  <div key={feature.name} className="card pt-6">
                     <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
                       <div className="-mt-6">
                         <div>
