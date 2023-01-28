@@ -143,15 +143,13 @@ const HeroSection = () => {
             <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-center">
               <div className="lg:py-24">
                 <h1 className="mt-4 text-4xl font-bold tracking-tight text-white  lg:mt-6 xl:text-6xl">
-                  <span className="block">A better way to</span>
+                  <span className="block">A hassle-free </span>
                   <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text pb-3 text-transparent sm:pb-5">
-                    ship web apps
+                  travel experience
                   </span>
                 </h1>
                 <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat.
+                Let us handle the details, from start to finish, to make your trip an unforgettable and effortless experience!
                 </p>
                 <div className="relative mx-auto mt-10 max-w-sm sm:flex sm:max-w-none  sm:justify-center">
                   <a

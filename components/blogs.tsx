@@ -4,7 +4,7 @@ import { Html } from "@react-three/drei";
 const blogPosts = [
   {
     id: 1,
-    title: "Boost your conversion rate",
+    title: "Reduce, Reuse, Recycle: How to Travel Sustainably",
     href: "#",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
@@ -23,7 +23,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "How to use search engine optimization to drive sales",
+    title: "How to Minimize Your Environmental Impact While Traveling",
     href: "#",
     date: "Mar 10, 2020",
     datetime: "2020-03-10",
@@ -42,7 +42,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Improve your customer experience",
+    title: "Sustainability on the Go: Strategies for a More Ethical Vacation",
     href: "#",
     date: "Feb 12, 2020",
     datetime: "2020-02-12",
@@ -65,9 +65,9 @@ const Blogs = () => {
     <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
       <div className="relative">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-lg font-semibold text-cyan-600">Learn</h2>
+          <h2 className="text-lg font-semibold text-cyan-600">Our blog</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Helpful Resources
+          Traveling Responsibly
           </p>
           <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
             Phasellus lorem quam molestie id quisque diam aenean nulla in.
