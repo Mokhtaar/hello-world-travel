@@ -9,7 +9,7 @@ function Testimonials() {
       <video autoPlay loop muted className="mx-auto h-auto w-[90%]">
         <source src="/testmo.webm" type="video/webm" />
         <source src="/testmo.mp4" type="video/mp4" />
-        Sorry, your browser doesn't support videos.
+        Sorry, your browser doesn&apos;t support videos.
       </video>
       {/* <Swiper
         spaceBetween={30}

@@ -79,7 +79,7 @@ export default function Services() {
           >
             <div className="wrapper grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
               {features.map((feature) => (
-                <motion.div variants={serSecionVariant} className="card">
+                <motion.div key={feature.name} variants={serSecionVariant} className="card">
                   <div key={feature.name} className="card pt-6">
                     <motion.div
                       whileHover={{
