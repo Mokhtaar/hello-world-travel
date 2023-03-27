@@ -83,7 +83,16 @@ export default function Services() {
               {features.map((feature) => (
                 <motion.div variants={serSecionVariant} className="card">
                   <div key={feature.name} className="card pt-6">
-                    <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                    <motion.div
+                      whileHover={{
+                        scale: 1.1,
+                        transition: { duration: 0.3 },
+                        // backgroundColor: "hotpink",
+                      }}
+                      drag
+                      dragSnapToOrigin
+                      className="flow-root rounded-lg bg-gray-50 px-6 pb-8"
+                    >
                       <div className="-mt-6">
                         <div>
                           <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 p-3 shadow-lg">
@@ -100,7 +109,7 @@ export default function Services() {
                           {feature.description}
                         </p>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </motion.div>
               ))}
