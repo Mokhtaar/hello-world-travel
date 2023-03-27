@@ -93,7 +93,7 @@ export default function Services() {
                     >
                       <div className="-mt-6">
                         <div>
-                          <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 p-3 shadow-lg">
+                          <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r bg-[#2a58a8] p-3 shadow-lg">
                             <feature.icon
                               className="h-6 w-6 text-white"
                               aria-hidden="true"

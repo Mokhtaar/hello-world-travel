@@ -11,7 +11,7 @@ import Stars from "../components/stars";
 import Model from "../components/Plane";
 import Advantages from "../components/Advantages";
 
-export default function Example() {
+export default function homePage() {
   return (
     <div className="relative overflow-hidden">
       <Canvas
@@ -26,6 +26,7 @@ export default function Example() {
         <HeroSection />
         <Stars />
       </Canvas>
+
       <main>
         <Services />
         {/* <Advantages /> */}

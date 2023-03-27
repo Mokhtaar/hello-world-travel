@@ -29,7 +29,7 @@ const HeroSection = () => {
   return (
     <Html fullscreen>
       <div
-        className="sm:pt-5 lg:overflow-hidden lg:pt-5 lg:pb-14"
+        // className="sm:pt-5 lg:overflow-hidden lg:pt-5 lg:pb-14"
         // style={{
         //   backgroundImage: `url("test.png")`,
         //   backgroundPosition: "center",
@@ -40,7 +40,7 @@ const HeroSection = () => {
         <Popover as="header" className="relative">
           <div className="pt-1">
             <nav
-              className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
+              className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:py-0 sm:px-6"
               aria-label="Global"
             >
               <div className="flex flex-1 justify-between items-center">
@@ -137,10 +137,10 @@ const HeroSection = () => {
             </Popover.Panel>
           </Transition>
         </Popover>
-        <div className=" pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
+        <div className="h-screen flex items-center text-center pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
           <div className="mx-auto max-w-7xl lg:px-8">
             {/* <div className="lg:grid lg:grid-cols-2 lg:gap-8"> */}
-            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-center">
+            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 text-center items-center lg:items-center lg:px-0 lg:text-center">
               <div className="lg:py-24">
                 <h1 className="mt-4 text-4xl font-bold tracking-tight text-white  lg:mt-6 xl:text-6xl">
                   <span className="block">A hassle-free </span>
@@ -149,9 +149,9 @@ const HeroSection = () => {
                   </span>
                 </h1>
                 <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                Let us handle the details, from start to finish, to make your trip an unforgettable and effortless experience!
+                Enjoy the journey and let us handle the details!
                 </p>
-                <div className="relative mx-auto mt-10 max-w-sm sm:flex sm:max-w-none  sm:justify-center">
+                <div className="relative mx-auto mt-10 max-w-sm flex sm:max-w-none  justify-center">
                   <a
                     href="https://m.me/helloworldeg/"
                     target="_blank"
@@ -172,7 +172,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </Html>
+      </Html>
     // <Html className="pt-4" fullscreen>
     //   <Popover as="header" className="relative">
     //     <div className="pt-1">
