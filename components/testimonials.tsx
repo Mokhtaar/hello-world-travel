@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 function Testimonials() {
   return (
     <>
-      <video autoPlay loop muted className="mx-auto h-auto w-[90%]">
+      <video id="testimonials" autoPlay loop muted className="mx-auto h-auto w-[90%]">
         <source src="/testmo.webm" type="video/webm" />
         <source src="/testmo.mp4" type="video/mp4" />
         Sorry, your browser doesn&apos;t support videos.

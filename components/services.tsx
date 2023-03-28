@@ -62,7 +62,7 @@ export default function Services() {
     visible: { opacity: 1, transition: { duration: 1 } },
   };
   return (
-    <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+    <div id="services" className="relative bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         {/* <h2 className="text-lg font-semibold text-cyan-600">Deploy faster</h2> */}
         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

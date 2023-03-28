@@ -12,10 +12,10 @@ import { useControls } from "leva";
 import { PerspectiveCamera } from "three";
 
 const navigation = [
-  { name: "About us", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Testimonials", href: "#" },
-  { name: "Contact us", href: "#" },
+  { name: "About us", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Testimonials", href: "#testimonials" },
+  { name: "Contact us", href: "#contact us" },
 ];
 function CameraHelper() {
   const camera = new PerspectiveCamera(60, 1, 1, 3);
