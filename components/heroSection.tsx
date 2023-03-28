@@ -93,7 +93,7 @@ const HeroSection = () => {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=cyan&to-shade=600&toShade=600"
+                      src="mark-2.png"
                       alt=""
                     />
                   </div>
@@ -116,7 +116,7 @@ const HeroSection = () => {
                       </a>
                     ))}
                   </div>
-                  <div className="mt-6 px-5">
+                  {/* <div className="mt-6 px-5">
                     <a
                       href="#"
                       className="block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
@@ -131,7 +131,7 @@ const HeroSection = () => {
                         Login
                       </a>
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </Popover.Panel>
