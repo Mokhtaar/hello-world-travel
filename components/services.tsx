@@ -32,17 +32,17 @@ const features = [
     icon: IoTrainOutline,
   },
   {
+    name: "Meet & Assist",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    icon: GiReceiveMoney,
+  },
+  {
     name: "Compensation",
     description:
       "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: GiReceiveMoney,
   },
-  // {
-  //   name: "Meet & Assist",
-  //   description:
-  //     "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-  //   icon: GiReceiveMoney,
-  // },
 ];
 
 export default function Services() {
@@ -69,7 +69,8 @@ export default function Services() {
           Everything you need to deploy your app
         </p>
         <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
-        Let us handle the details, from start to finish, to make your trip an unforgettable and effortless experience.
+          Let us handle the details, from start to finish, to make your trip an
+          unforgettable and effortless experience.
         </p>
         <div className="mt-12">
           <motion.div
@@ -77,10 +78,10 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
           >
-            <div className="wrapper grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
+            <div className=" grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {features.map((feature) => (
-                <motion.div key={feature.name} variants={serSecionVariant} className="card">
-                  <div key={feature.name} className="card pt-6">
+                <motion.div key={feature.name} variants={serSecionVariant}>
+                  <div key={feature.name} className="pt-6">
                     <motion.div
                       whileHover={{
                         scale: 1.1,
