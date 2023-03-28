@@ -87,8 +87,8 @@ export default function Services() {
                         transition: { duration: 0.3 },
                         // backgroundColor: "hotpink",
                       }}
-                      drag
-                      dragSnapToOrigin
+                      // drag
+                      // dragSnapToOrigin
                       className="flow-root rounded-lg bg-gray-50 px-6 pb-8"
                     >
                       <div className="-mt-6">
