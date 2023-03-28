@@ -149,7 +149,7 @@ const HeroSection = () => {
                   </span>
                 </h1>
                 <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                Enjoy the journey and let us handle the details!
+                Click here to get your dedicated travel concierge
                 </p>
                 <div className="relative mx-auto mt-10 max-w-sm flex sm:max-w-none  justify-center">
                   <a
