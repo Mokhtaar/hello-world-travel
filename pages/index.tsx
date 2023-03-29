@@ -20,7 +20,7 @@ export default function homePage() {
           // position: "fixed",
           width: "100%",
           backgroundColor: "#081529",
-          height: "95dvh",
+          height: "95vh",
         }}
       >
         <HeroSection />
